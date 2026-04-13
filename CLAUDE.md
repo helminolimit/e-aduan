@@ -16,11 +16,6 @@ composer run dev
 ```
 Starts four concurrent processes: Laravel dev server, queue worker, Pail log viewer, and Vite HMR. Access at `http://localhost:8000` (or `http://e-aduan.test` via Laragon).
 
-### Build assets
-```bash
-npm run build
-```
-
 ### Tests
 ```bash
 composer run test          # Run all tests (clears config cache first)
@@ -46,9 +41,9 @@ php artisan tinker          # REPL
 
 This is a fresh **Laravel 13** application using:
 - **PHP 8.3+**, **Laravel Framework 13.x**
-- **Tailwind CSS v4** (via `@tailwindcss/vite` plugin — no `tailwind.config.js` needed)
-- **Vite 8** for asset bundling (`resources/css/app.css`, `resources/js/app.js`)
 - **SQLite** as default database (file at `database/database.sqlite`; in-memory for tests)
+
+@.claude/rules/frontend.md
 
 ### Request lifecycle
 `routes/web.php` → `app/Http/Controllers/` → Blade views in `resources/views/`

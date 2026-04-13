@@ -40,11 +40,12 @@
                     <td class="px-4 py-3 text-right space-x-2 whitespace-nowrap">
                         <a href="{{ route('categories.edit', $category) }}"
                            class="text-blue-600 hover:underline text-xs">Edit</a>
-                        <form action="{{ route('categories.destroy', $category) }}" method="POST" class="inline"
-                              onsubmit="return confirm('Hapus kategori ini?')">
+                        <form action="{{ route('categories.destroy', $category) }}" method="POST" class="inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="text-red-500 hover:underline text-xs">Hapus</button>
+                            <button type="button"
+                                    onclick="Swal.fire({title:'Yakin?',text:'Hapus kategori ini?',icon:'warning',showCancelButton:true,confirmButtonText:'Ya, hapus!',cancelButtonText:'Batal'}).then(r=>{if(r.isConfirmed)this.closest('form').submit()})"
+                                    class="text-red-500 hover:underline text-xs">Hapus</button>
                         </form>
                     </td>
                 </tr>

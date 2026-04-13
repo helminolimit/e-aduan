@@ -48,7 +48,15 @@
             </button>
             <a href="{{ route('categories.index') }}"
                class="text-sm text-gray-600 hover:text-gray-900 px-5 py-2">Batal</a>
+            <button type="button"
+                    onclick="Swal.fire({title:'Yakin?',text:'Hapus kategori ini?',icon:'warning',showCancelButton:true,confirmButtonText:'Ya, hapus!',cancelButtonText:'Batal'}).then(r=>{if(r.isConfirmed)document.getElementById('form-delete-category').submit()})"
+                    class="text-red-500 hover:underline text-sm px-5 py-2 ml-auto">Hapus</button>
         </div>
+    </form>
+
+    <form id="form-delete-category" action="{{ route('categories.destroy', $category) }}" method="POST" class="hidden">
+        @csrf
+        @method('DELETE')
     </form>
 </div>
 @endsection
