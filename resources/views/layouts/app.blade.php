@@ -25,10 +25,8 @@
 
         @yield('content')
     </main>
-    <footer class="footer footer-center p-5 bg-base-300 text-base-content text-xs">
-        <div>
-            <p>© {{ date('Y') }} E-Aduan - Built with Laravel and Claude ❤️</p>
-        </div>
+    <footer class="py-5 bg-gray-200 text-gray-500 text-xs text-center">
+        <p>© {{ date('Y') }} E-Aduan - Built with Laravel and Claude ❤️</p>
     </footer>
 </body>
 </html>
