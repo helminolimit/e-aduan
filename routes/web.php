@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ComplaintController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,3 +11,4 @@ Route::get('/', function () {
 
 Route::resource('categories', CategoryController::class)->except(['show']);
 Route::resource('comments', CommentController::class)->except(['show']);
+Route::resource('complaints', ComplaintController::class)->except(['show']);

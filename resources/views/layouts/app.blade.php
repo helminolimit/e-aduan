@@ -12,6 +12,7 @@
         <div class="max-w-5xl mx-auto px-4 py-4 flex items-center gap-6">
             <a href="/" class="font-bold text-lg text-blue-600">E-Aduan</a>
             <a href="{{ route('categories.index') }}" class="text-sm text-gray-600 hover:text-blue-600">Kategori</a>
+            <a href="{{ route('complaints.index') }}" class="text-sm text-gray-600 hover:text-blue-600">Aduan</a>
         </div>
     </nav>
 
